@@ -16,6 +16,7 @@ import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
 import LinkItem from './linkitem'
 import { IoLogoGithub } from 'react-icons/io5'
+import NextLink from 'next/link'
 
 const Navbar = props => {
   const { path } = props

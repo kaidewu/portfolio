@@ -3,42 +3,31 @@ import Image from 'next/image'
 import React from 'react'
 import Paragraph from '../components/paragraph'
 import Layout from '../components/layouts/article'
+import Section from '../components/section'
 import { 
-  IconButton,
   Box,
-  Flex,
-  Avatar,
-  HStack,
   Link,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
-  useColorModeValue,
-  Stack,
   Center,
   Heading,
+  Container
 } from '@chakra-ui/react'
 
 export default function Home() {
   return (
     <Layout>
-      <Box display={{ md: 'flex' }}>
-        <Box flexGrow={1}>
-          <Heading as="h2" variant="page-title">
-            Welcome
+      <Center>
+        <Section delay={0.2}>
+          <Heading fontSize={"40px"} variant="page-title" marginTop={"7%"} marginBottom={"0.2em"}>
+            Hey, I'm Kaide
           </Heading>
-        </Box>
-        <Box
-          flexShrink={0}
-          mt={{ base: 4, md: 0 }}
-          ml={{ md: 6 }}
-          textAlign="center"
-        >
-        </Box>
-      </Box>
+          <Paragraph>
+            I'm a SysAdmin working on <Link href='https://laberit.com'>Laberit</Link>.
+            Chinese nationality born in Spain and actually living in Spain since I can remenber.
+            In my spare time, I study new tecnologies and build some projects like this portfolio.
+            You can find me on my <Link href='https://github.com/kaidewu'>Github</Link> and <Link href='https://linkedin.com/kaidewu'>Linkedin</Link>.
+          </Paragraph>
+        </Section>
+      </Center>
     </Layout>
   )
 }
