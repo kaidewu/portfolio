@@ -11,8 +11,8 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
       <NextLink href={href} passHref scroll={false}>
         <Link
           p={2}
-          bg={active ? 'black' : undefined}
-          color={active ? 'white' : inactiveColor}
+          bg={active ? 'none' : undefined}
+          color={active ? 'none' : inactiveColor}
           target={target}
           {...props}
         >

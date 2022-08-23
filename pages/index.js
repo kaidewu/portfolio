@@ -9,7 +9,8 @@ import {
   Link,
   Center,
   Heading,
-  Container
+  Container,
+  SimpleGrid
 } from '@chakra-ui/react'
 
 export default function Home() {
@@ -17,17 +18,29 @@ export default function Home() {
     <Layout>
       <Center>
         <Section delay={0.2}>
-          <Heading fontSize={"40px"} variant="page-title" marginTop={"7%"} marginBottom={"0.2em"}>
+          <Heading size="xl" marginTop={"7%"} marginBottom={"0.2em"}>
             Hey, I'm Kaide
           </Heading>
           <Paragraph>
-            I'm a SysAdmin working at <Link href='https://laberit.com'>Laberit</Link>.
+            I'm a SysAdmin working at {" "}
+            <Link href='https://laberit.com'>Laberit</Link>.
             Chinese nationality born in Spain, I live in Spain since I can remenber.
             In my spare time, I study new tecnologies and build some projects like this portfolio.
-            You can find me on my <Link href='https://github.com/kaidewu'>Github</Link> and <Link href='https://linkedin.com/kaidewu'>Linkedin</Link>.
+            You can find me on my {" "}
+            <Link href='https://github.com/kaidewu'>Github</Link> and {" "}
+            <Link href='https://linkedin.com/kaidewu'>Linkedin</Link>.
           </Paragraph>
         </Section>
       </Center>
+
+      <Section delay={0.2}>
+        <Heading fontSize={"30px"} variant="page-title" marginTop={"7%"} marginBottom={"0.2em"}>
+          Projects
+        </Heading>
+        <SimpleGrid columns={1} spacing={4} mt={8} w="100%">
+          Hello
+        </SimpleGrid>
+      </Section>
     </Layout>
   )
 }

@@ -10,17 +10,23 @@ import {
   MenuList,
   MenuButton,
   IconButton,
-  useColorModeValue
+  Button,
+  useColorModeValue,
+  useDisclosure,
+  Modal,
+  ModalContent,
+  ModalBody
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
 import LinkItem from './linkitem'
 import { IoLogoGithub } from 'react-icons/io5'
 import NextLink from 'next/link'
+import Paragraph from '../components/paragraph'
 
 const Navbar = props => {
   const { path } = props
-
+  const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <Box
       position="fixed"
@@ -52,9 +58,17 @@ const Navbar = props => {
           fontSize={"17px"}
           fontWeight={"bold"}
         >
-          <LinkItem href="/projects" path={path}>
+          <Button onClick={onOpen} path={path}>
             Projects
-          </LinkItem>
+          </Button>
+          <Modal isOpen={isOpen} onClose={onClose}>
+            <ModalContent>
+              <ModalBody>
+                <Paragraph>Working...</Paragraph>
+              </ModalBody>
+            </ModalContent>
+          </Modal>
+
           <LinkItem 
           href="https://github.com/kaidewu/portfolio" 
           path={path}
@@ -78,13 +92,11 @@ const Navbar = props => {
                 aria-label="Options"
               />
               <MenuList css={{ backdropFilter: 'blur(10px)' }}>
-                <NextLink href="/works" passHref>
-                  <MenuItem as={Link}>Works</MenuItem>
-                </NextLink>
                 <MenuItem
                   as={Link}
                   href="https://github.com/kaidewu/portfolio"
                 >
+                  <IoLogoGithub />
                   Source
                 </MenuItem>
               </MenuList>

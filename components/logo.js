@@ -30,9 +30,9 @@ const Logo = () => {
             variant={'link'}
             cursor={'pointer'}
             minW={0}>
-                <Avatar
-                size={'sm'}
-                src={'https://avatars.dicebear.com/api/male/username.svg'}/>
+              <Avatar
+              size={'md'}
+              src={'../public/images/dogo-avatar.jpg'}/>
           </MenuButton>
         </Menu>
       </a>
