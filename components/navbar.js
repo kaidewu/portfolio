@@ -1,11 +1,9 @@
 import Logo from './logo'
-import NextLink from 'next/link'
 import {
   Container,
   Box,
   Link,
   Stack,
-  Heading,
   Flex,
   Menu,
   MenuItem,
@@ -16,24 +14,8 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
-
-const LinkItem = ({ href, path, target, children, ...props }) => {
-  const active = path === href
-  const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
-  return (
-    <NextLink href={href} passHref scroll={false}>
-      <Link
-        p={2}
-        bg={active ? 'grassTeal' : undefined}
-        color={active ? '#202023' : inactiveColor}
-        target={target}
-        {...props}
-      >
-        {children}
-      </Link>
-    </NextLink>
-  )
-}
+import LinkItem from './linkitem'
+import { IoLogoGithub } from 'react-icons/io5'
 
 const Navbar = props => {
   const { path } = props
@@ -63,26 +45,22 @@ const Navbar = props => {
         <Stack
           direction={{ base: 'column', md: 'row' }}
           display={{ base: 'none', md: 'flex' }}
-          width={{ base: 'full', md: 'auto' }}
+          width={{ base: 'none', md: 'none' }}
           alignItems="center"
-          flexGrow={1}
-          mt={{ base: 4, md: 0 }}
+          marginLeft={"30%"}
+          fontSize={"17px"}
+          fontWeight={"bold"}
         >
-          <LinkItem href="/works" path={path}>
-            Works
+          <LinkItem href="/projects" path={path}>
+            Projects
           </LinkItem>
-          <LinkItem href="/about" path={path}>
-            About
-          </LinkItem>
-          <LinkItem
-            target="_blank"
-            href="https://github.com/kaidewu/portfolio"
-            path={path}
-            display="inline-flex"
-            alignItems="center"
-            style={{ gap: 4 }}
-            pl={2}
-          >
+          <LinkItem 
+          href="https://github.com/kaidewu/portfolio" 
+          path={path}
+          target="_blank"
+          display="inline-flex"
+          alignItems="center">
+            <IoLogoGithub />
             Source
           </LinkItem>
         </Stack>
@@ -91,17 +69,14 @@ const Navbar = props => {
           <ThemeToggleButton />
 
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
-            <Menu isLazy id="navbar-menu">
+            <Menu isLazy id="navbar-menu" >
               <MenuButton
                 as={IconButton}
                 icon={<HamburgerIcon />}
                 variant="outline"
                 aria-label="Options"
               />
-              <MenuList>
-                <NextLink href="/" passHref>
-                  <MenuItem as={Link}>About</MenuItem>
-                </NextLink>
+              <MenuList css={{ backdropFilter: 'blur(10px)' }}>
                 <NextLink href="/works" passHref>
                   <MenuItem as={Link}>Works</MenuItem>
                 </NextLink>
