@@ -1,12 +1,20 @@
-import '../styles/globals.css'
-import { ChakraProvider } from '@chakra-ui/react'
+import Layout from '../components/layouts/main'
+import Fonts from '../components/fonts'
+import Chakra from '../components/chakra'
 
-function MyApp({ Component, pageProps }) {
+if (typeof window !== 'undefined') {
+  window.history.scrollRestoration = 'manual'
+}
+
+function Website({ Component, pageProps, router }) {
   return (
-    <ChakraProvider>
-      <Component {...pageProps} />
-    </ChakraProvider>
+    <Chakra cookies={pageProps.cookies}>
+      <Fonts />
+      <Layout router={router}>
+          <Component {...pageProps} key={router.route} />
+      </Layout>
+    </Chakra>
   )
 }
 
-export default MyApp
+export default Website
