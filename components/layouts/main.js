@@ -10,19 +10,24 @@ const Main = ({ children, router }) => {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="description" content="Kaide's homepage" />
           <meta name="author" content="Kaide Wu" />
+          <link
+            rel="Dogo Icon"
+            sizes="180x180"
+            href="../../public/images/dogo-avatar.svg"
+          />
           <title>Kaide Wu</title>
         </Head>
-  
+
         <NavBar path={router.asPath} />
-  
+
         <Container maxW="container.md" pt={14}>
-  
+
           {children}
-  
+
           <Footer />
         </Container>
       </Box>
     )
   }
-  
+
   export default Main
