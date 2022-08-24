@@ -4,6 +4,7 @@ import React from 'react'
 import Paragraph from '../components/paragraph'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
+import ProjectCard from '../components/projectcard'
 import { 
   Box,
   Link,
@@ -12,6 +13,7 @@ import {
   Container,
   SimpleGrid
 } from '@chakra-ui/react'
+import Data from '../data/cards.json'
 
 export default function Home() {
   return (
@@ -34,11 +36,22 @@ export default function Home() {
       </Center>
 
       <Section delay={0.2}>
-        <Heading fontSize={"30px"} variant="page-title" marginTop={"7%"} marginBottom={"0.2em"}>
+        <Heading size="lg" variant="page-title" marginTop={"7%"}>
           Projects
         </Heading>
         <SimpleGrid columns={1} spacing={4} mt={8} w="100%">
-          Working...
+          <ProjectCard
+            title={Data.title}
+            description={Data.Description}
+            logo={Data.imageURL}
+            link={Data.repoURL} 
+            About={Data.About}/>
+            <ProjectCard
+            title={Data.portfolioTitle}
+            description={Data.portfolioDescription}
+            logo={Data.portfolioLogo}
+            link={Data.portfolioRepo}
+            About={Data.portfolioAbout}/>
         </SimpleGrid>
       </Section>
     </Layout>

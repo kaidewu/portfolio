@@ -22,7 +22,7 @@ import ThemeToggleButton from './theme-toggle-button'
 import LinkItem from './linkitem'
 import { IoLogoGithub } from 'react-icons/io5'
 import NextLink from 'next/link'
-import Paragraph from '../components/paragraph'
+import Paragraph from './paragraph'
 
 const Navbar = props => {
   const { path } = props
@@ -91,7 +91,7 @@ const Navbar = props => {
                 variant="outline"
                 aria-label="Options"
               />
-              <MenuList css={{ backdropFilter: 'blur(10px)' }}>
+              <MenuList>
                 <MenuItem
                   as={Link}
                   href="https://github.com/kaidewu/portfolio"

@@ -1,0 +1,15 @@
+{
+    "imageURL": "/images/myhomecloud-thum.svg",
+    "imageAlt": "MyHomeCloud thumnail",
+    "title": "MyHomeCloud",
+    "Description": "MyHomeCloud is a cloud storage that works in local mode. It written in spanish.",
+    "About": "Final degree project of System administration",
+    "repoURL": "https://github.com/kaidewu/portfolio",
+    "pdfURL": "https://drive.google.com/file/d/1KKawHV5SrMvc3y643f6jUGoK15nwQUQu/view?usp=sharing",
+    "portfolioTitle": "My Portfolio",
+    "portfolioDescription": "My Portfolio",
+    "portfolioAbout": "My Portfolio",
+    "portfolioLogo": "/images/dogo-avatar.jpg",
+    "portfolioRepo": "https://github.com/kaidewu/portfolio"
+}
+    

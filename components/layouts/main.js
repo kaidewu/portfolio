@@ -8,8 +8,7 @@ const Main = ({ children, router }) => {
       <Box as="main" pb={8}>
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="dogo-avatar" href="dogo-avatar-icon.jpg" />
-          <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+          <link rel="shortcut icon" href="/dogo-avatar-icon.ico" type="image/x-icon" />
           <meta name="description" content="Kaide's homepage" />
           <meta name="author" content="Kaide Wu" />
           <title>Kaide Wu</title>
