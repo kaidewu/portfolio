@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Text, useColorModeValue, Menu, MenuButton, Button, Avatar } from '@chakra-ui/react'
 import styled from '@emotion/styled'
+import AvatarLogo from '../public/images/dogo-avatar.jpg'
 
 const LogoBox = styled.span`
   font-weight: bold;
@@ -32,7 +33,7 @@ const Logo = () => {
             minW={0}>
               <Avatar
               size={'md'}
-              src={'../public/images/dogo-avatar.jpg'}/>
+              src={AvatarLogo}/>
           </MenuButton>
         </Menu>
       </a>
