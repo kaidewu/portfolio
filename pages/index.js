@@ -28,7 +28,7 @@ export default function Home() {
             In my spare time, I study new tecnologies and build some projects like this portfolio.
             You can find me on my {" "}
             <Link href='https://github.com/kaidewu'>Github</Link> and {" "}
-            <Link href='https://linkedin.com/kaidewu'>Linkedin</Link>.
+            <Link href='https://linkedin.com/in/kaidewu'>Linkedin</Link>.
           </Paragraph>
         </Section>
       </Center>
