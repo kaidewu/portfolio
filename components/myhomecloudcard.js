@@ -30,7 +30,7 @@ const ProjectCard = props => {
                         variant="solid" 
                         colorScheme="blue" 
                         rounded="full" px={2}>
-                        Data
+                        MyHomeCloud
                     </Badge>
                 </Stack>
                 <Stack align="center">
@@ -38,7 +38,7 @@ const ProjectCard = props => {
                         {Data.About}  
                     </Heading>
                     <Text fontWeight="light">
-                        Data is a cloud storage that works in local mode. It written in spanish.
+                        MyHomeCloud is a cloud storage that works in local mode. It written in spanish.
                     </Text>
                 </Stack>
                 <Flex>
