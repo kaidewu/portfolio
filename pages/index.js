@@ -22,9 +22,9 @@ export default function Home() {
             Hey, I'm Kaide
           </Heading>
           <Paragraph>
-            I'm a SysAdmin working at {" "}
+            I am a System Admin working at {" "}
             <Link href='https://laberit.com'>Laberit</Link>.
-            Chinese nationality born in Spain, I live in Spain since I can remenber.
+            Chinese nationality and born in Spain, I live in Spain since I can remenber.
             In my spare time, I study new tecnologies and build some projects like this portfolio.
             You can find me on my {" "}
             <Link href='https://github.com/kaidewu'>Github</Link> and {" "}
@@ -38,7 +38,7 @@ export default function Home() {
           Projects
         </Heading>
         <SimpleGrid columns={1} spacing={4} mt={8} w="100%">
-          Hello
+          Working...
         </SimpleGrid>
       </Section>
     </Layout>
