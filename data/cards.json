@@ -8,8 +8,7 @@
     "pdfURL": "https://drive.google.com/file/d/1KKawHV5SrMvc3y643f6jUGoK15nwQUQu/view?usp=sharing",
     "portfolioTitle": "My Portfolio",
     "portfolioDescription": "My Portfolio",
-    "portfolioAbout": "My Portfolio",
-    "portfolioLogo": "/images/dogo-avatar.jpg",
-    "portfolioRepo": "https://github.com/kaidewu/portfolio"
+    "portfolioURL": "/",
+    "portfolioLogo": "/images/dogo-avatar.jpg"
 }
     

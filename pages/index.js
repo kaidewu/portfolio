@@ -4,7 +4,8 @@ import React from 'react'
 import Paragraph from '../components/paragraph'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import ProjectCard from '../components/projectcard'
+import MyHomeCloudProjectCard from '../components/myhomecloudprojectcard'
+import PortfolioProjectCard from '../components/portfolioprojectcard'
 import { 
   Box,
   Link,
@@ -40,18 +41,17 @@ export default function Home() {
           Projects
         </Heading>
         <SimpleGrid columns={1} spacing={4} mt={8} w="100%">
-          <ProjectCard
+          <MyHomeCloudProjectCard
             title={Data.title}
             description={Data.Description}
             logo={Data.imageURL}
             link={Data.repoURL} 
             About={Data.About}/>
-            <ProjectCard
-            title={Data.portfolioTitle}
-            description={Data.portfolioDescription}
-            logo={Data.portfolioLogo}
-            link={Data.portfolioRepo}
-            About={Data.portfolioAbout}/>
+          <PortfolioProjectCard
+          title={Data.portfolioTitle}
+          Description={Data.portfolioDescription}
+          logo={Data.portfolioLogo}
+          url={Data.portfolioURL}/>
         </SimpleGrid>
       </Section>
     </Layout>
