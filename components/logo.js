@@ -32,7 +32,8 @@ const Logo = () => {
             cursor={'pointer'}
             minW={0}>
               <Image
-              size={'md'}
+              borderRadius='full'
+              boxSize='50px'
               src={AvatarLogo}
               alt='Dogo Avatar'
               />
