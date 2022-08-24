@@ -31,9 +31,11 @@ const Logo = () => {
             variant={'link'}
             cursor={'pointer'}
             minW={0}>
-              <Avatar
+              <Image
               size={'md'}
-              src={AvatarLogo}/>
+              src={AvatarLogo}
+              alt='Dogo Avatar'
+              />
           </MenuButton>
         </Menu>
       </a>
