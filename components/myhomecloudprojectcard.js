@@ -1,15 +1,22 @@
 import React from "react"
 import {
-  HStack,
-  VStack,
-  Text,
-  useColorModeValue,
-  Box,
-  Link,
-  useDisclosure,
+    HStack,
+    VStack,
+    Text,
+    useColorModeValue,
+    Box,
+    Link,
+    useDisclosure,
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalCloseButton,
+    ModalBody
 } from "@chakra-ui/react"
 import Image from "./image"
-import ProjectPopUp from './projectpopup'
+import { AnimatePresence, motion } from 'framer-motion'
+import ModalCard from './myhomecloudcard'
 
 const ProjectCard = ({ title, logo, About }) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -78,7 +85,23 @@ const ProjectCard = ({ title, logo, About }) => {
                 </HStack>
             </Link>
 
-            <ProjectPopUp />
+            <AnimatePresence exitBeforeEnter initial={false}>
+                <motion.div
+                    initial={{ y: -20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 1.3 }}>
+                    <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
+                        <ModalOverlay />
+                        <ModalContent>
+                            <ModalHeader align="center">{title}</ModalHeader>
+                            <ModalCloseButton />
+                            <ModalBody>
+                                <ModalCard />
+                            </ModalBody>
+                        </ModalContent>
+                    </Modal>
+                </motion.div>
+            </AnimatePresence>
         </>
     )
 };
