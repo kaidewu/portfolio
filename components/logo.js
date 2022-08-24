@@ -34,7 +34,7 @@ const Logo = () => {
               <Avatar
                 name='Dogo Logo'
                 size='md'
-                src='../public/images/dogo-avatar.svg'
+                src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fih1.redbubble.net%2Fimage.613726245.4139%2Ffposter%2Csmall%2Cwall_texture%2Cproduct%2C750x1000.u7.jpg&f=1&nofb=1'
               />{' '}
           </MenuButton>
         </Menu>
