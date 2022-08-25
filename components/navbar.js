@@ -58,7 +58,7 @@ const Navbar = props => {
           fontSize={"17px"}
           fontWeight={"bold"}
         >
-          <Button onClick={onOpen} path={path}>
+          <Button onClick={onOpen} path={path} fontWeight={"bold"} fontSize={"17px"}>
             Projects
           </Button>
           <Modal isOpen={isOpen} onClose={onClose}>
