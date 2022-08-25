@@ -5,7 +5,8 @@ import {
   Text,
   useColorModeValue,
   Box,
-  Link
+  Link,
+  Heading
 } from "@chakra-ui/react"
 import Image from "./image"
 
@@ -37,6 +38,7 @@ const ProjectCard = ({ title, logo, Description, url }) => {
                     overflow="hidden"
                     lineHeight={0}
                     boxShadow="inset 0 0 1px 1px rgba(0, 0, 0, 0.04)"
+                    bgColor={"rgba(255, 250, 185, 0.8)"}
                     >
                     <Box
                         position="absolute"
@@ -48,17 +50,17 @@ const ProjectCard = ({ title, logo, Description, url }) => {
                     ></Box>
                     <Image
                         src={logo}
-                        height={36}
-                        width={36}
+                        height={40}
+                        width={40}
                         layout="fixed"
                         rounded="md"
                     ></Image>
                     </Box>
 
-                    <VStack align="start" justify="flex-start" spacing={1}>
+                    <VStack align="start" justify="flex-start" spacing={1} textDecoration={"none"}>
                         <VStack spacing={0} align="start">
                             <HStack>
-                                <Text fontWeight="bold" fontSize="md" noOfLines={2} color={useColorModeValue("black", "white")}>
+                                <Text fontWeight={"bold"} fontSize="md" color={useColorModeValue("black", "white")}>
                                     {title}
                                 </Text>
                             </HStack>

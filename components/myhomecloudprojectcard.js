@@ -48,6 +48,7 @@ const ProjectCard = ({ title, logo, About }) => {
                     overflow="hidden"
                     lineHeight={0}
                     boxShadow="inset 0 0 1px 1px rgba(0, 0, 0, 0.04)"
+                    bgColor={"rgba(183, 242, 255, 0.8)"}
                     >
                     <Box
                         position="absolute"
@@ -59,8 +60,8 @@ const ProjectCard = ({ title, logo, About }) => {
                     ></Box>
                     <Image
                         src={logo}
-                        height={36}
-                        width={36}
+                        height={40}
+                        width={40}
                         layout="fixed"
                         rounded="md"
                     ></Image>

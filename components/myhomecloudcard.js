@@ -22,7 +22,7 @@ const ProjectCard = props => {
     return (
         <>  
             <Center>
-                <Image src={Data.imageURL} alt={Data.imageAlt} boxSize="300px"/>
+                <Image src={Data.imageURL} alt={Data.imageAlt} boxSize="400px" />
             </Center>
             <Box p={5}>
                 <Stack align="center">
