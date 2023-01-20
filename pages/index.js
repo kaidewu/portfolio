@@ -26,12 +26,12 @@ export default function Home() {
           </Heading>
           <Paragraph>
             I am a System Admin working at {" "}
-            <Link href='https://laberit.com'>Laberit</Link>.
-            Chinese nationality and born in Spain, I live in Spain since I can remenber.
+            <Link href='https://www.laberit.com'>Laberit</Link>.
+            Chinese nationality born in Spain, I live in Spain since I can remenber.
             In my spare time, I study new tecnologies and build some projects like this portfolio.
             You can find me on my {" "}
-            <Link href='https://github.com/kaidewu'>Github</Link> and {" "}
-            <Link href='https://linkedin.com/in/kaidewu'>Linkedin</Link>.
+            <Link href='https://www.github.com/kaidewu'>Github</Link> and {" "}
+            <Link href='https://www.linkedin.com/in/kaidewu'>Linkedin</Link>.
           </Paragraph>
         </Section>
       </Center>
